@@ -3,11 +3,13 @@ apiVersion: v1
 kind: Pod
 
 metadata:
-  name: #{website-image-latest}#
+  name: nginx
+  labels:
+    app: website
 
 spec:
   containers:
     - name: nginx
-      image: nginx:1.14.2
+      image: #{website-image-latest}#
       ports:
         - containerPort: 80
