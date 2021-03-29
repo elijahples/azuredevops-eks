@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Pod
 
 metadata:
-  name: #{website-latest-image}#
+  name: #{website-image-latest}#
 
 spec:
   containers:
