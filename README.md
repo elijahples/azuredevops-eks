@@ -6,4 +6,5 @@
 Files inside:
 
 deploy.yaml - pod definition for creating a simple pod. Pod image field is tokenized
+
 eksctl.yaml - For use with eksctl to create the EKS cluster
