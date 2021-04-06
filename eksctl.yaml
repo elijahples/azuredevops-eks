@@ -1,0 +1,37 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: simple-cluster
+  region: ap-southeast-1
+  version: 1.19
+
+vpc:
+  id: "<change this to your vpc id (i.e vpc-07xxxxxxxx)>"
+  subnets:
+    public:
+      public-one: # arbitrary key
+          id: "<change this to the public subnet id (i.e subnet-0153e560b3129a696)>"
+      public-two:
+          id: "<change this to the public subnet id>"
+    private:
+      private-one:
+          id: "<change this to the private subnet id>"
+      private-two:
+          id: "<change this to the private subnet id>"
+
+managedNodeGroups:
+  - name: private-mng-1
+    instanceType: m5.large
+    desiredCapacity: 2 # how many nodes to provision
+    privateNetworking: true
+    subnets: # restrict nodes to private subnets
+      - private-one 
+      - private-two
+
+cloudWatch:
+  clusterLogging:
+    enableTypes: 
+      - '*'
+
+
