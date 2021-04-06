@@ -1,7 +1,9 @@
 # EKS Files used in Azure Dev Ops Deployment to AWS Elastic Kubernetes Service (EKS)
 
-## Prepared by Elijah Pelaez
-## Solutions Architect, Amazon Web Services Philippines
+## This repository is used as an artifact source for the Release (CD) Pipeline in Azure Dev Ops
+
+### Prepared by Elijah Pelaez
+### Solutions Architect, Amazon Web Services Philippines
 
 Files inside:
 
